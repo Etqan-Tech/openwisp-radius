@@ -57,10 +57,10 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework.authtoken",
     "django_filters",
+    #"djangosaml2"
     "private_storage",
     "drf_yasg",
     "openwisp2.integrations",
-    "djangosaml2",
     "channels",
     # 'debug_toolbar',
 ]
@@ -69,7 +69,7 @@ LOGIN_REDIRECT_URL = "admin:index"
 
 AUTHENTICATION_BACKENDS = (
     "openwisp_users.backends.UsersAuthenticationBackend",
-    "openwisp_radius.saml.backends.OpenwispRadiusSaml2Backend",
+    #"openwisp_radius.saml.backends.OpenwispRadiusSaml2Backend",
     "sesame.backends.ModelBackend",
 )
 
@@ -92,16 +92,16 @@ MIDDLEWARE = [
     "sesame.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    "djangosaml2.middleware.SamlSessionMiddleware",
+    #"djangosaml2.middleware.SamlSessionMiddleware",
     # 'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 SESSION_COOKIE_SECURE = True
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-SAML_ALLOWED_HOSTS = []
-SAML_USE_NAME_ID_AS_USERNAME = True
-SAML_CREATE_UNKNOWN_USER = True
-SAML_CONFIG = {}
+#SAML_ALLOWED_HOSTS = []
+#SAML_USE_NAME_ID_AS_USERNAME = True
+#SAML_CREATE_UNKNOWN_USER = True
+#SAML_CONFIG = {}
 
 ROOT_URLCONF = "openwisp2.urls"
 
